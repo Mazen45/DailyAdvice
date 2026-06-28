@@ -37,10 +37,10 @@ Daily Advice fetches a random advice slip from the [Advice Slip API](https://api
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/daily-advice.git
+git clone https://github.com/your-username/DailyAdvice.git
 
 # Navigate into the project
-cd daily-advice
+cd DailyAdvice
 
 # Install dependencies
 npm install
