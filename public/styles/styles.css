@@ -1,0 +1,72 @@
+
+p{
+    font-size: 30px;
+    font-weight: 500;
+    color: #E0E1DD;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  background: #212534;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -5%;
+  z-index: -2;
+  pointer-events: none;
+
+  background-image: linear-gradient(
+    var(--rotate),
+    #0D1B2A,
+    #415A77 43%,
+    #E0E1DD
+  );
+
+  animation: spin 20s linear infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image: linear-gradient(
+    var(--rotate),
+    #0D1B2A,
+    #415A77 43%,
+    #E0E1DD
+  );
+
+  filter: blur(150px);
+  transform: scale(1.2);
+  opacity: 0.7;
+
+  animation: spin 20s linear infinite;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
